@@ -1,12 +1,12 @@
 # react-animal-farm
 
-> git clone
+### Installation Command
 
-> npm i && run dev
- 
-> cd server
- 
-> npm i && node .
+```bash
+git clone https://github.com/ASproson/react-animal-farm.git && cd react-animal-farm && npm install && npm run dev && cd server && npm install && node .
+```
+
+### Servers
 
 > Frontend: [http://127.0.0.1:5173/](http://127.0.0.1:5173/)
 
