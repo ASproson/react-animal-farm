@@ -2,8 +2,15 @@
 
 ### Installation Command
 
+Frontend:
+
 ```bash
-git clone https://github.com/ASproson/react-animal-farm.git && cd react-animal-farm && npm install && npm run dev && cd server && npm install && node .
+git clone https://github.com/ASproson/react-animal-farm.git && cd react-animal-farm && npm install && npm run dev 
+```
+
+Backend:
+```bash
+cd react-animal-farm && cd server && npm install && node .
 ```
 
 ### Servers
