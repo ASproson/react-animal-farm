@@ -1,5 +1,7 @@
 # react-animal-farm
 
+Simple web app using React + Vite + TypeScript + Node + Express to call a local backend server and render data on the frontend
+
 ### Installation Command
 
 Frontend:
@@ -19,4 +21,6 @@ cd react-animal-farm && cd server && npm install && node .
 
 > Backend: [http://localhost:8080/](http://localhost:8080/)
 
-Enter a search term and call the backend server to retrieve data. Previous query is stored locally in the browser to persist even through refreshing using `localStorage`. 
+Enter a search term and call the backend server to retrieve data
+
+Previous query is stored locally in the browser to persist even through refreshing using `localStorage`
