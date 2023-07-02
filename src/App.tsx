@@ -1,17 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [searchText, setSearchText] = useState("");
-  const [animals, setAnimals] = useState([]);
-
-  const search = async (q: string) => {
-    const response = await fetch(
-      "http://localhost:8080?" + new URLSearchParams({ q })
-    );
-
-    const data = await response.json();
-    setAnimals(data);
-  };
+  const { search, animals } = useAnimalSearch();
 
   return (
     <main>
@@ -46,4 +36,28 @@ export const Animal = ({ type, name, age }: AnimalProps) => {
       <strong>{type}</strong> {name} ({age} years old)
     </li>
   );
+};
+
+const useAnimalSearch = () => {
+  const [animals, setAnimals] = useState([]);
+
+  useEffect(() => {
+    const lastQuery = localStorage.getItem("lastQuery");
+    if (lastQuery) {
+      search(lastQuery);
+    }
+  }, []);
+
+  const search = async (q: string) => {
+    const response = await fetch(
+      "http://localhost:8080?" + new URLSearchParams({ q })
+    );
+
+    const data = await response.json();
+    setAnimals(data);
+
+    localStorage.setItem("lastQuery", q);
+  };
+
+  return { search, animals };
 };
