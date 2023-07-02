@@ -15,8 +15,8 @@ function App() {
       <ul>
         {animals.length === 0 && "No animals found"}
 
-        {animals.map((animal) => (
-          <Animal key={animal.id} {...animal} />
+        {animals.map((animal: object) => (
+          <Animal {...animal} />
         ))}
       </ul>
     </main>
