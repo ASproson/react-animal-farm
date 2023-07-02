@@ -7,12 +7,12 @@ Simple web app using React + Vite + TypeScript + Node + Express to call a local 
 Frontend:
 
 ```bash
-git clone https://github.com/ASproson/react-animal-farm.git && cd react-animal-farm && npm install && npm run dev 
+git clone https://github.com/ASproson/react-animal-farm.git && cd react-animal-farm && npm i && npm run dev 
 ```
 
 Backend:
 ```bash
-cd react-animal-farm && cd server && npm install && node .
+cd react-animal-farm && cd server && npm i && node .
 ```
 
 ### Servers
